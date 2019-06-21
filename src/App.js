@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -13,14 +12,14 @@ function App() {
             <button type="submit" name="submit" value="submit">Submit</button>
         </form>
       </header>
-      <div class="main">
+      <div className="main">
         <div>
           <h2>Invitees</h2>
           <label>
             <input type="checkbox" /> Hide those who haven't responded
           </label>
         </div>
-        <table class="counter">
+        <table className="counter">
           <tbody>
             <tr>
               <td>Attending:</td>
@@ -37,15 +36,15 @@ function App() {
           </tbody>
         </table>
         <ul>
-          <li class="pending"><span>Safia</span></li>
-          <li class="responded"><span>Iver</span>
+          <li className="pending"><span>Safia</span></li>
+          <li className="responded"><span>Iver</span>
             <label>
               <input type="checkbox" checked /> Confirmed
             </label>
             <button>edit</button>
             <button>remove</button>
           </li>
-          <li class="responded">
+          <li className="responded">
             <span>Corrina</span>
             <label>
               <input type="checkbox" checked /> Confirmed
