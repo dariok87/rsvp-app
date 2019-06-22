@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import GuestLIst from './GuestList';
 
@@ -13,9 +13,13 @@ class App extends Component {
       {
         name: 'Nic',
         isConfirmed: true
+      },
+      {
+        name: 'Matt',
+        isConfirmed: true
       }
     ]
-  }
+  };
 
   getTotalInvited = () => this.state.guests.length;
   // getAttendingGuests = () =>
@@ -56,7 +60,7 @@ class App extends Component {
             </tbody>
           </table>
           
-          <GuestLIst />
+          <GuestLIst guests={this.state.guests}/>
 
         </div>
       </div>
