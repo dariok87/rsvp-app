@@ -7,11 +7,11 @@ const GuestLIst = props =>
 			<li key={index}>
 				<span>{guest.name}</span>
 				<label>
-						<input type="checkbox" checked={guest.isConfirmed} /> Confirmed
+					<input type="checkbox" checked={guest.isConfirmed} /> Confirmed
 				</label>
 				<button>edit</button>
 				<button>remove</button>
-		</li>
+			</li>
 		)}
 	</ul>
 
