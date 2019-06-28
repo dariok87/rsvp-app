@@ -5,13 +5,13 @@ import GuestName from './GuestName';
 const Guest = props => 
 	<li>
 		<GuestName isEditing={props.isEditing}>
-		{props.name}
+			{props.name}
 		</GuestName>
 		<label>
 			<input 
-			type="checkbox" 
-			checked={props.isConfirmed}
-			onChange={props.handleConfirmation} /> Confirmed
+				type="checkbox" 
+				checked={props.isConfirmed}
+				onChange={props.handleConfirmation} /> Confirmed
 		</label>
 		<button onClick={props.handleToggleEditing}>edit</button>
 		<button>remove</button>
