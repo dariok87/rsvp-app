@@ -81,7 +81,11 @@ class App extends Component {
           <div>
             <h2>Invitees</h2>
             <label>
-              <input type="checkbox" /> Hide those who haven't responded
+              <input 
+              type="checkbox"
+              onChange={this.toggleFilter} 
+              checked={this.state.isFiltered}
+              /> Hide those who haven't responded
             </label>
           </div>
           <table className="counter">
