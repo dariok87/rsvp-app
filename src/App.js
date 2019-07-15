@@ -85,9 +85,10 @@ class App extends Component {
           </table>
           
           <GuestLIst 
-          guests={this.state.guests}
-          toggleConfirmationAt={this.toggleConfirmationAt}
-          toggleEditingAt={this.toggleEditingAt}
+            guests={this.state.guests}
+            toggleConfirmationAt={this.toggleConfirmationAt}
+            toggleEditingAt={this.toggleEditingAt}
+            setNameAt={this.setNameAt}
           />
 
         </div>
