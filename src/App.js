@@ -5,6 +5,7 @@ import GuestLIst from './GuestList';
 class App extends Component {
 
   state = {
+    isFiltered: false,
     guests: [
       {
         name: 'Treasure',
@@ -57,6 +58,9 @@ class App extends Component {
         return guest;
       })
     });
+
+  toggleFilter = () =>
+    this.setState({ isFiltered: !this.state.isFiltered });
 
   getTotalInvited = () => this.state.guests.length;
   // getAttendingGuests = () =>
