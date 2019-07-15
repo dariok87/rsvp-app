@@ -65,6 +65,21 @@ class App extends Component {
 
   handleNameInput = e => 
     this.setState({ pendingGuest: e.target.value });
+  
+  newGuestSubmitHandler = e => {
+    e.preventDefault();
+    this.setState({
+      guests: [
+        {
+          name: this.state.pendingGuest,
+          isConfirmed: false,
+          isEditing: false
+        },
+        ...this.state.guests
+      ],
+      pendingGuest: ''
+    });
+  }
 
   getTotalInvited = () => this.state.guests.length;
   // getAttendingGuests = () =>
@@ -76,11 +91,11 @@ class App extends Component {
         <header>
           <h1>RSVP</h1>
           <p>A Treehouse App</p>
-          <form>
+          <form onSubmit={this.newGuestSubmitHandler}>
               <input
                 type="text"
                 onChange={this.handleNameInput}
-                value="Safia"
+                value={this.state.pendingGuest}
                 placeholder="Invite Someone" />
               <button type="submit" name="submit" value="submit">Submit</button>
           </form>
