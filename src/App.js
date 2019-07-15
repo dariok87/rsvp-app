@@ -6,6 +6,7 @@ class App extends Component {
 
   state = {
     isFiltered: false,
+    pendingGuest: "",
     guests: [
       {
         name: 'Treasure',
@@ -62,6 +63,9 @@ class App extends Component {
   toggleFilter = () =>
     this.setState({ isFiltered: !this.state.isFiltered });
 
+  handleNameInput = e => 
+    this.setState({ pendingGuest: e.target.value });
+
   getTotalInvited = () => this.state.guests.length;
   // getAttendingGuests = () =>
   // getUnconfirmedGuests () =>
@@ -73,7 +77,11 @@ class App extends Component {
           <h1>RSVP</h1>
           <p>A Treehouse App</p>
           <form>
-              <input type="text" value="Safia" placeholder="Invite Someone" />
+              <input
+                type="text"
+                onChange={this.handleNameInput}
+                value="Safia"
+                placeholder="Invite Someone" />
               <button type="submit" name="submit" value="submit">Submit</button>
           </form>
         </header>
