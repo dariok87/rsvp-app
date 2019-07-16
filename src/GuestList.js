@@ -5,6 +5,7 @@ import PendingGuest from './PendingGuest';
 
 const GuestLIst = props => 
 	<ul>
+		<PendingGuest name={props.PendingGuest}/>
 		{props.guests
 			.filter(guest => !props.isFiltered || guest.isConfirmed)
 			.map((guest, index) =>
