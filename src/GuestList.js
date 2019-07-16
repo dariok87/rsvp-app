@@ -5,7 +5,7 @@ import PendingGuest from './PendingGuest';
 
 const GuestLIst = props => 
 	<ul>
-		<PendingGuest name={props.PendingGuest}/>
+		<PendingGuest name={props.pendingGuest}/>
 		{props.guests
 			.filter(guest => !props.isFiltered || guest.isConfirmed)
 			.map((guest, index) =>
@@ -27,7 +27,8 @@ GuestLIst.propTypes = {
 	toggleEditingAt: PropTypes.func.isRequired,
 	setNameAt: PropTypes.func.isRequired,
 	isFiltered: PropTypes.bool.isRequired,
-	removeGuestAt: PropTypes.func.isRequired
+	removeGuestAt: PropTypes.func.isRequired,
+	pendingGuest: PropTypes.func.isRequired
 };
 
 export default GuestLIst;
