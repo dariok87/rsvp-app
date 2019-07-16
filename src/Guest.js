@@ -18,7 +18,7 @@ const Guest = props =>
 		<button onClick={props.handleToggleEditing}>
 			{props.isEditing ? "save" : "edit"}
 		</button>
-		<button>remove</button>
+		<button onClick={props.handleRemove}>remove</button> 
 	</li>;
 
 Guest.propTypes = {
