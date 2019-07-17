@@ -92,11 +92,18 @@ class App extends Component {
   }
 
   getTotalInvited = () => this.state.guests.length;
-  // getAttendingGuests = () =>
-  // getUnconfirmedGuests () =>
+  
+  getAttendingGuests = () =>
+    this.state.guests.reduce(
+      (total, guest) => guest.isConfirmed ? total + 1 : total, 
+      0
+    );
+
+
 
   render() {
     const totalInvited = this.getTotalInvited();
+    const numberAttending = this.getAttendingGuests();
     return (
       <div className="App">
         <header>
