@@ -96,6 +96,7 @@ class App extends Component {
   // getUnconfirmedGuests () =>
 
   render() {
+    const totalInvited = this.getTotalInvited();
     return (
       <div className="App">
         <header>
@@ -121,7 +122,9 @@ class App extends Component {
               /> Hide those who haven't responded
             </label>
           </div>
-          <Counter />
+          <Counter 
+            totalInvited={totalInvited}
+          />
           
           <GuestLIst 
             guests={this.state.guests}
