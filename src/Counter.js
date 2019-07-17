@@ -19,4 +19,10 @@ const Counter = props =>
 		</tbody>
 	</table>;
 
+Counter.propTypes = {
+	numberAttending: PropTypes.number,
+	numberUnconfirmed: PropTypes.number,
+	totalInvited: PropTypes.number
+};
+
 export default Counter;
