@@ -104,6 +104,8 @@ class App extends Component {
   render() {
     const totalInvited = this.getTotalInvited();
     const numberAttending = this.getAttendingGuests();
+    const numberUnconfirmed = totalInvited - numberAttending;
+    
     return (
       <div className="App">
         <header>
