@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
+
 import GuestLIst from './GuestList';
+import Counter from './Counter';
 
 class App extends Component {
 
