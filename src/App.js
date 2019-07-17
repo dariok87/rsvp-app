@@ -131,6 +131,7 @@ class App extends Component {
           </div>
           <Counter 
             totalInvited={totalInvited}
+            numberAttending={numberAttending}
           />
           
           <GuestLIst 
