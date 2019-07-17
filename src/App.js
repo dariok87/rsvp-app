@@ -105,7 +105,7 @@ class App extends Component {
     const totalInvited = this.getTotalInvited();
     const numberAttending = this.getAttendingGuests();
     const numberUnconfirmed = totalInvited - numberAttending;
-    
+
     return (
       <div className="App">
         <header>
@@ -134,6 +134,7 @@ class App extends Component {
           <Counter 
             totalInvited={totalInvited}
             numberAttending={numberAttending}
+            numberUnconfirmed={numberUnconfirmed}
           />
           
           <GuestLIst 
