@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import GuestInputForm from '../GuestInputForm';
+import GuestInputForm from './GuestInputForm';
 
 const Header = props =>
 	<header>
