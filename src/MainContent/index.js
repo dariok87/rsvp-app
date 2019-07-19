@@ -15,7 +15,7 @@ const MainContent = props =>
 			numberAttending={props.numberAttending}
 			numberUnconfirmed={props.numberUnconfirmed}
 		/>
-		<GuestLIst 
+		<GuestList 
 			guests={props.state.guests}
 			toggleConfirmationAt={props.toggleConfirmationAt}
 			toggleEditingAt={props.toggleEditingAt}
