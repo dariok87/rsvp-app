@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Guest from './Guest';
 import PendingGuest from './PendingGuest';
 
-const GuestLIst = props => 
+const GuestList = props => 
 	<ul>
 		<PendingGuest name={props.pendingGuest}/>
 		{props.guests
@@ -21,7 +21,7 @@ const GuestLIst = props =>
 		)}
 	</ul>;
 
-GuestLIst.propTypes = {
+GuestList.propTypes = {
 	guests: PropTypes.array.isRequired,
 	toggleConfirmationAt: PropTypes.func.isRequired,
 	toggleEditingAt: PropTypes.func.isRequired,
