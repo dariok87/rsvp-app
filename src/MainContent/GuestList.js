@@ -31,4 +31,4 @@ GuestLIst.propTypes = {
 	pendingGuest: PropTypes.string.isRequired
 };
 
-export default GuestLIst;
+export default GuestList;
