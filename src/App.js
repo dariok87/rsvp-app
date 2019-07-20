@@ -3,6 +3,7 @@ import './App.css';
 
 import Header from './Header';
 import MainContent from './MainContent';
+import { identifier } from '@babel/types';
 
 class App extends Component {
 
@@ -10,6 +11,14 @@ class App extends Component {
     isFiltered: false,
     pendingGuest: "",
     guests: []
+  };
+
+  lastGuestId = 0;
+
+  newGuestId = () => {
+    const id = this.lastGuestId;
+    this.lastGuestId += 1;
+    return id;
   };
 
   toggleGuestPropertyAt = (property,indexToChange) =>
