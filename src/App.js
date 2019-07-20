@@ -69,12 +69,14 @@ class App extends Component {
   
   newGuestSubmitHandler = e => {
     e.preventDefault();
+    const id = this.newGuestId(); 
     this.setState({
       guests: [
         {
           name: this.state.pendingGuest,
           isConfirmed: false,
-          isEditing: false
+          isEditing: false,
+          id
         },
         ...this.state.guests
       ],
