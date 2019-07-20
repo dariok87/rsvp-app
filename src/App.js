@@ -21,10 +21,10 @@ class App extends Component {
     return id;
   };
 
-  toggleGuestPropertyAt = (property,indexToChange) =>
+  toggleGuestPropertyAt = (property, id) =>
     this.setState({
-      guests: this.state.guests.map((guest,index) => {
-        if (index === indexToChange) {
+      guests: this.state.guests.map(guest => {
+        if (id === guest.id) {
           return {
             ...guest,
             [property]: !guest[property]
@@ -34,24 +34,21 @@ class App extends Component {
       })
     });
 
-  toggleConfirmationAt = index =>
-    this.toggleGuestPropertyAt("isConfirmed", index);
+  toggleConfirmationAt = id =>
+    this.toggleGuestPropertyAt("isConfirmed", id);
   
-  removeGuestAt = index => 
+  removeGuestAt = id => 
     this.setState({
-      guests: [
-        ...this.state.guests.slice(0, index),
-        ...this.state.guests.slice(index +1)
-      ]
+      guests: this.state.guests.filter(guest => id !== guest.id)
     });
 
-  toggleEditingAt = index =>
-    this.toggleGuestPropertyAt("isEditing", index);
+  toggleEditingAt = id =>
+    this.toggleGuestPropertyAt("isEditing", id);
 
-  setNameAt = (name, indexToChange) =>
+  setNameAt = (name, id) =>
     this.setState({
-      guests: this.state.guests.map((guest,index) => {
-        if (index === indexToChange) {
+      guests: this.state.guests.map(guest => {
+        if (id === guest.id) {
           return {
             ...guest,
             name
